@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+
+# Env files
+.env
+*.env
+
+# Git
+.git
+.gitignore
+
+# Vector DB
+vectorstore_db/
+*.faiss
+*.pkl
+
+# Data
+data/pdfs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
