@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg-color: #FAFAF9;
+  --card-bg: #FFFFFF;
+  --text-primary: #18181B;
+  --text-secondary: #71717A;
+  --border-color: #E4E4E7;
+  --accent-color: #6366F1;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-color: #09090B;
+  --card-bg: #111113;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --border-color: #27272A;
+  --accent-color: #818CF8;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.45);
+}
+
+/* Markdown prose tweaks */
+.rag-prose {
+  line-height: 1.7;
+}
+.rag-prose h1, .rag-prose h2, .rag-prose h3 {
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.rag-prose h1 { font-size: 1.4rem; }
+.rag-prose h2 { font-size: 1.2rem; }
+.rag-prose h3 { font-size: 1.05rem; }
+.rag-prose p {
+  margin-bottom: 0.85rem;
+}
+.rag-prose ul, .rag-prose ol {
+  padding-left: 1.4rem;
+  margin-bottom: 0.85rem;
+}
+.rag-prose li {
+  margin-bottom: 0.35rem;
+}
+.rag-prose code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  background-color: rgba(120, 120, 120, 0.12);
+}
+.rag-prose pre {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: rgba(20, 20, 25, 0.9);
+  color: #F3F4F6;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0.85rem 0;
+  font-size: 0.88rem;
+}
+.rag-prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+.rag-prose blockquote {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 1rem;
+  margin: 0.85rem 0;
+  color: var(--text-secondary);
+}

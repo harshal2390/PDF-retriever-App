@@ -1,28 +1,77 @@
-# Env files (CRITICAL)
+# ==============================================================================
+# DocuMind AI — Root .gitignore (FastAPI Backend + React Frontend Monorepo)
+# ==============================================================================
+
+# Environment files and API keys (CRITICAL)
 .env
+.env.*
 *.env
 **/.env
+**/.env.*
 
-# Python
-__pycache__/
-*.pyc
-
-# Virtual env
+# Python virtual environments
 venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
-# Vector DB
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Databases & Runtime Storage (FastAPI)
+storage/
+*.db
+*.sqlite
+*.sqlite3
+
+# Vector Databases & FAISS indices
 vectorstore_db/
 *.faiss
 *.pkl
 
-# Data
+# PDF files, uploads & dataset artifacts
+*.pdf
+**/*.pdf
 data/pdfs/*
 !data/pdfs/.gitkeep
 
-# IDE
-.vscode/
-.idea/
+# Node.js & React Frontend
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+.vite/
+**/.vite/
+*.local
 
-# OS
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE & Editor settings
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Operating System artifacts
 .DS_Store
 Thumbs.db
+desktop.ini
